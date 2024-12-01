@@ -13,13 +13,19 @@ def main():
 
     print("Welcome to the [not-so] random number calculator!")
 
-    op = randrange(2)
+    op = randrange(4)
     if op == 0:
         print("Adding!")
         result = add()
     elif op == 1:
         print("Subtracting!")
         result = subtract()
+    elif op == 2:
+        print("Adding then subtracting!")
+        result = add() + subtract()
+    elif op == 3:
+        print("Subtracting then adding!")
+        result = subtract() - add()
 
     print(f"The result is {result}")
 
